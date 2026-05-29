@@ -13,4 +13,4 @@ Set-LocalUser -Name "Administrator" -Password $sysAdminPwd
 Enable-LocalUser -Name "Administrator"
 
 Set-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\OOBE" -Name "BypassNRO" -Value 1 -Force
-cmd.exe /c "oobe\bypassnro.cmd"
+& "$env:SystemRoot\System32\oobe\bypassnro.cmd"
